@@ -58,4 +58,4 @@ au BufReadPost *
 
 command! W w " use :W as save
 
-:color desert " set color scheme as jellybeans
+:color desert " set color scheme as desert
