@@ -15,6 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim' " ctrlp, easy file finder
 Plugin 'scrooloose/nerdcommenter' " nerdcommenter, easy comment/decomment
 Plugin 'scrooloose/syntastic' " syntastic, syntax checking plugin
+Plugin 'scrooloose/nerdtree'  " nerdtree, explore filesystem for vim
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -49,6 +50,11 @@ set showmatch " show matched brackets
 set hlsearch " highlighted searched results
 set smartcase " sensitive case search
 set clipboard=unnamed " setting for MAC
+
+" open a NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " cursor at last modified point
 au BufReadPost *
