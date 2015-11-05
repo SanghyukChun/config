@@ -16,6 +16,7 @@ Plugin 'kien/ctrlp.vim' " ctrlp, easy file finder
 Plugin 'scrooloose/nerdcommenter' " nerdcommenter, easy comment/decomment
 Plugin 'scrooloose/syntastic' " syntastic, syntax checking plugin
 Plugin 'scrooloose/nerdtree'  " nerdtree, explore filesystem for vim
+Plugin 'jistr/vim-nerdtree-tabs'  " nerdtree-tabs, NERDTree and tabs together in Vim, painlessly
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,12 +52,18 @@ set hlsearch " highlighted searched results
 set smartcase " sensitive case search
 set clipboard=unnamed " setting for MAC
 
-set mouse=a " enable vim automatic visual mode using mouse
+set mouse=a " enable vim automatic visual mode using mouse " press shift for disable (e.g. for copy & paste)
 
 " open a NERDTree automatically when vim starts up
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" for NERDtree tabs
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup=1
+" use :tn as shortcut of :tabnew
+ca tn tabnew 
 
 " cursor at last modified point
 au BufReadPost *
