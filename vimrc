@@ -16,7 +16,8 @@ Plugin 'kien/ctrlp.vim' " ctrlp, easy file finder
 Plugin 'scrooloose/nerdcommenter' " nerdcommenter, easy comment/decomment
 Plugin 'scrooloose/syntastic' " syntastic, syntax checking plugin
 Plugin 'scrooloose/nerdtree'  " nerdtree, explore filesystem for vim
-Plugin 'jistr/vim-nerdtree-tabs'  " nerdtree-tabs, NERDTree and tabs together in Vim, painlessly
+Plugin 'jistr/vim-nerdtree-tabs' " nerdtree-tabs, NERDTree and tabs together in Vim, painlessly
+Plugin 'Valloric/YouCompleteMe'  " youcompleteme, fast, as-you-type, fuzzy-search code completion engine for Vim
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
