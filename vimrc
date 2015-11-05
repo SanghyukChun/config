@@ -18,6 +18,7 @@ Plugin 'scrooloose/syntastic' " syntastic, syntax checking plugin
 Plugin 'scrooloose/nerdtree'  " nerdtree, explore filesystem for vim
 Plugin 'jistr/vim-nerdtree-tabs' " nerdtree-tabs, NERDTree and tabs together in Vim, painlessly
 Plugin 'Valloric/YouCompleteMe'  " youcompleteme, fast, as-you-type, fuzzy-search code completion engine for Vim
+Plugin 'vim-scripts/taglist.vim' " taglist, source code browser plugin for Vim
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
