@@ -51,6 +51,8 @@ set hlsearch " highlighted searched results
 set smartcase " sensitive case search
 set clipboard=unnamed " setting for MAC
 
+set mouse=a " enable vim automatic visual mode using mouse
+
 " open a NERDTree automatically when vim starts up
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
