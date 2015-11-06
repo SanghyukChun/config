@@ -48,7 +48,7 @@ set tabstop=2 " set tab as 2 spaces
 set expandtab " use space instead of tab
 set shiftwidth=2 " auto indent = 2 spaces
 
-"syntax enable " use syntax highlighter
+syntax enable " use syntax highlighter
 set title " show title
 set showmatch " show matched brackets
 set hlsearch " highlighted searched results
