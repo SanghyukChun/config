@@ -1,6 +1,9 @@
 " [Start] Setting from https://github.com/VundleVim/Vundle.vim
 set nocompatible              " be iMproved, required
+set backspace=2               " compatible with version 5.4 and earlier
 filetype off                  " required
+
+:color desert                 " set color scheme as desert
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -45,13 +48,19 @@ let g:nerdtree_tabs_open_on_console_startup=1 " Open NERDTree on console vim sta
 " ------------------------------------------------------------------------------------------"
 
 " --- TagList Setting-----------------------------------------------------------------------"
-nmap <F7> :TlistToggle<CR>
 let Tlist_Use_Right_Window=1
 let Tlist_Auto_Open=1
 let Tlist_Enable_Fold_Column=0
 let Tlist_Compact_Format=0
 let Tlist_File_Fold_Auto_Close = 1
 nmap <LocalLeader>tt :Tlist<cr>
+" ------------------------------------------------------------------------------------------"
+
+" --- Key Mapping Setting-------------------------------------------------------------------"
+map <F2> :set nonumber!<CR>
+map <F6> :NERDTreeToggle<CR>
+map <F7> :TlistToggle<CR>
+map <F8> :SrcExplToggle<CR>
 " ------------------------------------------------------------------------------------------"
 
 set autoindent
@@ -77,6 +86,4 @@ set mouse=a " enable vim automatic visual mode using mouse " press shift for dis
 
 " use :tn as shortcut of :tabnew
 ca tn tabnew
-:set backspace=2  "compatible with version 5.4 and earlier
 command! W w " use :W as save
-:color desert " set color scheme as desert
