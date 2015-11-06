@@ -14,3 +14,13 @@ mv ~/.vim ~/.vim.old
 ln -s $DIR/vimfiles ~/.vim
 mv ~/.vimrc ~/.vimrc.old
 ln -s $DIR/vimrc ~/.vimrc
+
+if [ ! -d "$DIR/oh-my-zsh" ]; then
+  git clone https://github.com/robbyrussell/oh-my-zsh.git
+fi
+
+mv ~/.zshrc ~/.zshrc.old
+ln -s $DIR/oh-my-zsh ~/.oh-my-zsh
+ln -s $DIR/zshrc ~/.zshrc
+chsh -s `which zsh`
+
