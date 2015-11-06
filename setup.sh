@@ -1,7 +1,16 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-#mv ~/.vim ~/.vim.old
-#ln -s $DIR/vim ~/.vim
+if [ ! -d "$DIR/vimfiles" ]; then
+mkdir $DIR/vimfiles
+fi
+
+if [ ! -d "$DIR/vimfiles/bundle" ]; then
+mkdir $DIR/vimfiles/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git $DIR/vimfiles/bundle/Vundle.vim
+fi
+
+mv ~/.vim ~/.vim.old
+ln -s $DIR/vimfiles ~/.vim
 mv ~/.vimrc ~/.vimrc.old
 ln -s $DIR/vimrc ~/.vimrc
