@@ -68,11 +68,11 @@ let g:nerdtree_tabs_open_on_console_startup=1
 " use :tn as shortcut of :tabnew
 ca tn tabnew 
 
-" cursor at last modified point
-au BufReadPost *
-\ if line("'\"") > 0 && line("'\"") <= line("$") |
-\ exe "norm g`\"" |
-\ endif
+"" cursor at last modified point
+"au BufReadPost *
+"\ if line("'\"") > 0 && line("'\"") <= line("$") |
+"\ exe "norm g`\"" |
+"\ endif
 
 command! W w " use :W as save
 
