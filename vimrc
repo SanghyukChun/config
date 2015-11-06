@@ -37,6 +37,23 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 " [End] Setting from https://github.com/VundleVim/Vundle.vim
 
+" --- NERDTree Tabs Setting ----------------------------------------------------------------"
+" NERDTree auto open
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_gui_startup=1     " Open NERDTREE on gvim/macvim startup
+let g:nerdtree_tabs_open_on_console_startup=1 " Open NERDTree on console vim startup
+" ------------------------------------------------------------------------------------------"
+
+" --- TagList Setting-----------------------------------------------------------------------"
+nmap <F7> :TlistToggle<CR>
+let Tlist_Use_Right_Window=1
+let Tlist_Auto_Open=1
+let Tlist_Enable_Fold_Column=0
+let Tlist_Compact_Format=0
+let Tlist_File_Fold_Auto_Close = 1
+nmap <LocalLeader>tt :Tlist<cr>
+" ------------------------------------------------------------------------------------------"
+
 set autoindent
 set cindent " auto inden for C
 set smartindent " set smart indent
@@ -57,23 +74,9 @@ set clipboard=unnamed " setting for MAC
 
 set mouse=a " enable vim automatic visual mode using mouse " press shift for disable (e.g. for copy & paste)
 
-" open a NERDTree automatically when vim starts up
-"autocmd vimenter * NERDTree
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" for NERDtree tabs
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
-let g:nerdtree_tabs_open_on_console_startup=1 " Open NERDTree on console vim startup
 " use :tn as shortcut of :tabnew
-ca tn tabnew 
-
-"" cursor at last modified point
-"au BufReadPost *
-"\ if line("'\"") > 0 && line("'\"") <= line("$") |
-"\ exe "norm g`\"" |
-"\ endif
-
+ca tn tabnew
+:set backspace=2  "compatible with version 5.4 and earlier
 command! W w " use :W as save
-
 :color desert " set color scheme as desert
