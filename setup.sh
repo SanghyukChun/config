@@ -2,12 +2,12 @@
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 if [ ! -d "$DIR/vimfiles" ]; then
-mkdir $DIR/vimfiles
+  mkdir $DIR/vimfiles
 fi
 
 if [ ! -d "$DIR/vimfiles/bundle" ]; then
-mkdir $DIR/vimfiles/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git $DIR/vimfiles/bundle/Vundle.vim
+  mkdir $DIR/vimfiles/bundle
+  git clone https://github.com/VundleVim/Vundle.vim.git $DIR/vimfiles/bundle/Vundle.vim
 fi
 
 mv ~/.vim ~/.vim.old
