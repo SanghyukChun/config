@@ -20,7 +20,9 @@ Plugin 'scrooloose/nerdcommenter' " nerdcommenter, easy comment/decomment
 Plugin 'scrooloose/syntastic' " syntastic, syntax checking plugin
 Plugin 'scrooloose/nerdtree'  " nerdtree, explore filesystem for vim
 Plugin 'jistr/vim-nerdtree-tabs' " nerdtree-tabs, NERDTree and tabs together in Vim, painlessly
-Plugin 'Valloric/YouCompleteMe'  " youcompleteme, fast, as-you-type, fuzzy-search code completion engine for Vim
+if v:version > 703                 " youcompleteme requires Vim 7.3.598+
+  Plugin 'Valloric/YouCompleteMe'  " youcompleteme, fast, as-you-type, fuzzy-search code completion engine for Vim
+endif
 Plugin 'vim-scripts/taglist.vim' " taglist, source code browser plugin for Vim
 Plugin 'wesleyche/SrcExpl' " srcexpl, Source Explorer that provides context for the currently selected keyword
 
