@@ -58,6 +58,7 @@ nmap <LocalLeader>tt :Tlist<cr>
 
 " --- Key Mapping Setting-------------------------------------------------------------------"
 map <F2> :set nonumber!<CR>
+map <F3> :set hlsearch!<CR>
 map <F6> :NERDTreeToggle<CR>
 map <F7> :TlistToggle<CR>
 map <F8> :SrcExplToggle<CR>
