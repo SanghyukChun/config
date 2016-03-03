@@ -1,0 +1,9 @@
+[
+	/* key bindings */
+	// auto indent when paste code with ctrl + v
+	{"keys": ["ctrl+v"], "command": "paste_and_indent"},
+	{"keys": ["ctrl+shift+v"], "command": "paste"},
+
+	// reindent code by crtl + shift + r
+	{"keys": ["ctrl+shift+r"],  "command": "reindent"}
+]

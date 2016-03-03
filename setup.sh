@@ -20,6 +20,7 @@ if [ ! -d "$DIR/oh-my-zsh" ]; then
 fi
 
 mv ~/.zshrc ~/.zshrc.old
+mv ~/.oh-my-zsh ~/.oh-my-zsh.old
 ln -s $DIR/oh-my-zsh ~/.oh-my-zsh
 ln -s $DIR/zshrc ~/.zshrc
 chsh -s `which zsh`
