@@ -23,7 +23,7 @@ if [ ! -d "$DIR/oh-my-zsh/custom/lib" ]; then
   mkdir $DIR/oh-my-zsh/custom/lib
 fi
 
-ln -s $DIR/zsh/sanghyuk.zsh-theme $DIR/oh-my-zsh/theme/sanghyuk.zsh-theme
+ln -s $DIR/zsh/sanghyuk.zsh-theme $DIR/oh-my-zsh/themes/sanghyuk.zsh-theme
 ln -s $DIR/zsh/sanghyuk.git.zsh $DIR/oh-my-zsh/custom/lib/git.zsh
 
 mv ~/.zshrc ~/.zshrc.old
