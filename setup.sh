@@ -19,6 +19,13 @@ if [ ! -d "$DIR/oh-my-zsh" ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh.git
 fi
 
+if [ ! -d "$DIR/oh-my-zsh/custom/lib" ]; then
+  mkdir $DIR/oh-my-zsh/custom/lib
+fi
+
+ln -s $DIR/zsh/sanghyuk.zsh-theme $DIR/oh-my-zsh/theme/sanghyuk.zsh-theme
+ln -s $DIR/zsh/sanghyuk.git.zsh $DIR/oh-my-zsh/custom/lib/git.zsh
+
 mv ~/.zshrc ~/.zshrc.old
 mv ~/.oh-my-zsh ~/.oh-my-zsh.old
 ln -s $DIR/oh-my-zsh ~/.oh-my-zsh

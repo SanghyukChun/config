@@ -17,18 +17,20 @@ Plugin 'VundleVim/Vundle.vim'
 " personal setting for plugins 
 Plugin 'kien/ctrlp.vim' " ctrlp, easy file finder
 Plugin 'scrooloose/nerdcommenter' " nerdcommenter, easy comment/decomment
-Plugin 'scrooloose/syntastic' " syntastic, syntax checking plugin
+"Plugin 'scrooloose/syntastic' " syntastic, syntax checking plugin
 Plugin 'scrooloose/nerdtree'  " nerdtree, explore filesystem for vim
 Plugin 'jistr/vim-nerdtree-tabs' " nerdtree-tabs, NERDTree and tabs together in Vim, painlessly
 if v:version > 703                 " youcompleteme requires Vim 7.3.598+
-  Plugin 'Valloric/YouCompleteMe'  " youcompleteme, fast, as-you-type, fuzzy-search code completion engine for Vim
+  "Plugin 'Valloric/YouCompleteMe'  " youcompleteme, fast, as-you-type, fuzzy-search code completion engine for Vim
 endif
-Plugin 'vim-scripts/taglist.vim' " taglist, source code browser plugin for Vim
-Plugin 'wesleyche/SrcExpl' " srcexpl, Source Explorer that provides context for the currently selected keyword
+"Plugin 'vim-scripts/taglist.vim' " taglist, source code browser plugin for Vim
+"Plugin 'wesleyche/SrcExpl' " srcexpl, Source Explorer that provides context for the currently selected keyword
+Plugin 'klen/python-mode' " python-mode
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+syntax on
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -58,6 +60,13 @@ let Tlist_File_Fold_Auto_Close = 1
 nmap <LocalLeader>tt :Tlist<cr>
 " ------------------------------------------------------------------------------------------"
 
+" -----python-mode Setting----------------------------------------------------------------- "
+set foldlevel=99
+let g:pymode_options_colorcolumn = 0
+let g:pymode_lint_ignore = "E501,E402"
+" ------------------------------------------------------------------------------------------"
+
+
 " --- Key Mapping Setting-------------------------------------------------------------------"
 map <F2> :set nonumber!<CR>
 map <F3> :set hlsearch!<CR>
@@ -86,6 +95,9 @@ set clipboard=unnamed " setting for MAC " for iterm2, enable Use modern parser (
 
 set mouse=a " enable vim automatic visual mode using mouse " press shift for disable (e.g. for copy & paste)
 
+set wildmenu
+set wildignore=*.bak,*.o,*.e,*~
+set completeopt-=preview
 
 " use :tn as shortcut of :tabnew
 ca tn tabnew
