@@ -82,3 +82,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+fg() {
+    if [[ $# -eq 1 && $1 = - ]]; then
+        builtin fg %-
+    else
+        builtin fg %"$@"
+    fi
+}
