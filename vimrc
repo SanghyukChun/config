@@ -20,12 +20,13 @@ Plugin 'scrooloose/nerdcommenter' " nerdcommenter, easy comment/decomment
 "Plugin 'scrooloose/syntastic' " syntastic, syntax checking plugin
 Plugin 'scrooloose/nerdtree'  " nerdtree, explore filesystem for vim
 Plugin 'jistr/vim-nerdtree-tabs' " nerdtree-tabs, NERDTree and tabs together in Vim, painlessly
-if v:version > 703                 " youcompleteme requires Vim 7.3.598+
+"if v:version > 703                 " youcompleteme requires Vim 7.3.598+
   "Plugin 'Valloric/YouCompleteMe'  " youcompleteme, fast, as-you-type, fuzzy-search code completion engine for Vim
-endif
+"endif
 "Plugin 'vim-scripts/taglist.vim' " taglist, source code browser plugin for Vim
 "Plugin 'wesleyche/SrcExpl' " srcexpl, Source Explorer that provides context for the currently selected keyword
 Plugin 'klen/python-mode' " python-mode
+Plugin 'airblade/vim-gitgutter' "vim-gitgutter, shows a git diff
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,7 +47,6 @@ syntax on
 
 " --- NERDTree Tabs Setting ----------------------------------------------------------------"
 " NERDTree auto open
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_gui_startup=1     " Open NERDTREE on gvim/macvim startup
 let g:nerdtree_tabs_open_on_console_startup=1 " Open NERDTree on console vim startup
 " ------------------------------------------------------------------------------------------"
@@ -70,9 +70,9 @@ let g:pymode_lint_ignore = "E501,E402"
 " --- Key Mapping Setting-------------------------------------------------------------------"
 map <F2> :set nonumber!<CR>
 map <F3> :set hlsearch!<CR>
-map <F6> :NERDTreeToggle<CR>
-map <F7> :TlistToggle<CR>
-map <F8> :SrcExplToggle<CR>
+map <F6> :NERDTreeTabsToggle<CR>
+"map <F7> :TlistToggle<CR>
+"map <F8> :SrcExplToggle<CR>
 " ------------------------------------------------------------------------------------------"
 
 set autoindent
