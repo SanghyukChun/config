@@ -26,7 +26,9 @@ Plugin 'jistr/vim-nerdtree-tabs' " nerdtree-tabs, NERDTree and tabs together in 
 "Plugin 'vim-scripts/taglist.vim' " taglist, source code browser plugin for Vim
 "Plugin 'wesleyche/SrcExpl' " srcexpl, Source Explorer that provides context for the currently selected keyword
 Plugin 'klen/python-mode' " python-mode
-Plugin 'airblade/vim-gitgutter' "vim-gitgutter, shows a git diff
+Plugin 'airblade/vim-gitgutter' " vim-gitgutter, shows a git diff
+Plugin 'Xuyuanp/nerdtree-git-plugin' " nerdtree-git, git plugin for nerdtree
+Plugin 'tpope/vim-fugitive' " vim-fugitive
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,19 +53,55 @@ let g:nerdtree_tabs_open_on_gui_startup=1     " Open NERDTREE on gvim/macvim sta
 let g:nerdtree_tabs_open_on_console_startup=1 " Open NERDTree on console vim startup
 " ------------------------------------------------------------------------------------------"
 
+" --- NERDTree Git Setting ----------------------------------------------------------------"
+let g:NERDTreeIndicatorMapCustom = {
+      \ "Modified"  : "~",
+      \ "Staged"    : "+",
+      \ "Untracked" : "u",
+      \ "Renamed"   : "r",
+      \ "Unmerged"  : "!",
+      \ "Deleted"   : "-",
+      \ "Dirty"     : "*",
+      \ "Clean"     : "",
+      \ "Unknown"   : "?"
+      \ }
+" ------------------------------------------------------------------------------------------"
+
 " --- TagList Setting-----------------------------------------------------------------------"
-let Tlist_Use_Right_Window=1
-let Tlist_Auto_Open=1
-let Tlist_Enable_Fold_Column=0
-let Tlist_Compact_Format=0
-let Tlist_File_Fold_Auto_Close = 1
-nmap <LocalLeader>tt :Tlist<cr>
+"let Tlist_Use_Right_Window=1
+"let Tlist_Auto_Open=1
+"let Tlist_Enable_Fold_Column=0
+"let Tlist_Compact_Format=0
+"let Tlist_File_Fold_Auto_Close = 1
+"nmap <LocalLeader>tt :Tlist<cr>
 " ------------------------------------------------------------------------------------------"
 
 " -----python-mode Setting----------------------------------------------------------------- "
 set foldlevel=99
 let g:pymode_options_colorcolumn = 0
 let g:pymode_lint_ignore = "E501,E402"
+let g:pymode_rope_goto_definition_bind = "<F1>"
+" ------------------------------------------------------------------------------------------"
+
+" -----git-fugitive Setting----------------------------------------------------------------- "
+" other commands: 
+"   - Gbrowse (open source in web)
+"   - Gsplit (git horizontal split)
+"   - Ggrep (git grep)
+"   - Glog (git log)
+ca gb Gblame
+ca ge Gedit
+ca gm Gmove
+ca grm Gremove
+ca gvs Gvsplit
+ca revert Gread
+ca add Gwrite
+" use  - to add file at Gstatus!
+ca gst Gstatus
+ca gdiff Gdiff
+ca gcommit Gcommit
+ca gpush Gpush
+ca gpull Gpull
 " ------------------------------------------------------------------------------------------"
 
 

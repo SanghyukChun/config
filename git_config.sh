@@ -1,10 +1,18 @@
 #!/bin/bash
+if [ "$#" -ne 1 ]; then
+  flag='local'
+else
+  flag='global'
+fi
 
-git config --global color.branch auto
-git config --global color.diff auto
-git config --global color.interactive auto
-git config --global color.status auto
-git config --global push.default matching
+git config --$flag user.name larry-chun
+git config --$flag user.email "larry.chun@kakaocorp.com"
+git config --$flag color.branch auto
+git config --$flag color.diff auto
+git config --$flag color.interactive auto
+git config --$flag color.status auto
+git config --$flag push.default matching
 
-git config --global alias.l "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold red)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(cyan)<%an>%C(reset)%C(bold yellow)%d%C(reset)' --all"
-git config --global alias.st status
+git config --$flag alias.l "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold red)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(cyan)<%an>%C(reset)%C(bold yellow)%d%C(reset)' --all"
+git config --$flag alias.ci 'commit --author "larry-chun <larry.chun@kakaocorp.com>"'
+git config --$flag alias.st status
