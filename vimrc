@@ -97,11 +97,11 @@ ca gvs Gvsplit
 ca revert Gread
 ca add Gwrite
 " use  - to add file at Gstatus!
-ca gst Gstatus
-ca gdiff Gdiff
-ca gcommit Gcommit
-ca gpush Gpush
-ca gpull Gpull
+ca st Gstatus
+ca diff Gdiff
+ca commit Gcommit
+ca push Gpush
+ca pull Gpull
 " ------------------------------------------------------------------------------------------"
 
 
