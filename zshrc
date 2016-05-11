@@ -90,3 +90,6 @@ fg() {
         builtin fg %"$@"
     fi
 }
+
+# Add custom config or alias in custom_zshrc
+source $ZSH/custom_zshrc

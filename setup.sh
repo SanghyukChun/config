@@ -17,6 +17,7 @@ ln -s $DIR/vimrc ~/.vimrc
 
 if [ ! -d "$DIR/oh-my-zsh" ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh.git
+  cp $DIR/custom_zshrc $DIR/oh-my-zsh
 fi
 
 if [ ! -d "$DIR/oh-my-zsh/custom/lib" ]; then
